@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/logo.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <main class="card">
+    <header class="brand">
+      <img class="brand-logo" src="{{ '/assets/logo.svg' | relative_url }}" alt="" width="48" height="48">
+      <div>
+        <p class="brand-name">Unslop</p>
+        <p class="brand-tagline">Hides AI-written slop on your LinkedIn feed</p>
+      </div>
+    </header>
+    <article class="policy">
+      {{ content }}
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; {{ 'now' | date: '%Y' }} Conform LLC</p>
+  </footer>
+</body>
+</html>
